@@ -13,10 +13,12 @@
 	<!--<hr><h5><a href="{{ "/about" | relLangURL }}">ABOUT ME</a></h5>-->
         <div class="short-about">
             {{ with .Site.Params.sidebar_avatar }}
-            <a href=" /presskit ">
+            {{ end }}
+
+            <a href="{{ "/presskit" | relLangURL }}">
                <img src="{{ . | relURL }}" alt="avatar" style="cursor: pointer" />
             </a>
-            {{ end }}
+           
             {{ with .Site.Params.sidebar_about_description }}
                 <p>{{ . }}</p>
             {{ end }}
